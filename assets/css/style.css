@@ -1,1 +1,35 @@
-<style placeholder: 已在画布中生成的CSS内容，请替换为实际CSS></style>
+:root {
+  --bg:#0b1020;
+  --panel:#0f172a;
+  --text:#e2e8f0;
+  --brand:#38bdf8;
+  --muted:#94a3b8;
+  --maxw:1080px;
+}
+*{box-sizing:border-box}
+body {
+  margin:0;
+  font-family: sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+.nav {
+  background: var(--panel);
+  padding: 10px 20px;
+}
+.nav-inner {max-width:var(--maxw); margin:auto; display:flex; justify-content:space-between; align-items:center;}
+.links a {margin-left:15px; color:var(--text); text-decoration:none;}
+.links a.active {color: var(--brand);}
+.wrap {max-width:var(--maxw); margin:auto; padding:30px;}
+.panel {background: var(--panel); padding:20px; border-radius:10px;}
+.hero {display:flex; gap:20px;}
+.hero-left {flex:2;}
+.hero-right {flex:1; text-align:center;}
+.avatar {max-width:200px; border-radius:10px;}
+.social {margin-top:10px; display:flex; gap:10px; flex-wrap:wrap; justify-content:center;}
+.chip {background:#1e293b; padding:6px 10px; border-radius:20px; color:#fff; font-size:0.9rem;}
+.section-title {display:flex; align-items:center; gap:10px; margin-bottom:20px;}
+.section-title .bar {width:8px; height:20px; background:var(--brand);}
+.grid {display:grid; gap:15px; grid-template-columns:repeat(auto-fit, minmax(250px, 1fr));}
+.card {background:#1e293b; padding:15px; border-radius:8px;}
+footer {text-align:center; color:var(--muted); padding:20px;}
