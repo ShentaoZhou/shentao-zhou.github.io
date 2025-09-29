@@ -30,7 +30,7 @@ a:hover{opacity:.9}
 .hero{display:grid;gap:24px;align-items:start}
 .hero-left-photo{grid-template-columns:320px 1fr}
 .hero-photo{display:flex;flex-direction:column;gap:12px;align-items:center}
-.avatar-lg{width:100%;max-width:300px;aspect-ratio:1/1;border-radius:16px;object-fit:cover;border:1px solid rgba(148,163,184,.18);box-shadow:var(--shadow)}
+.avatar-lg{width:100%;max-width:100px;aspect-ratio:1/1;border-radius:16px;object-fit:cover;border:1px solid rgba(148,163,184,.18);box-shadow:var(--shadow)}
 .social-col{display:flex;flex-direction:column;gap:8px;width:100%}
 .chip{display:inline-flex;align-items:center;justify-content:center;padding:10px 12px;border-radius:999px;background:#1e293b;color:#e2e8f0;border:1px solid rgba(148,163,184,.25)}
 .chip.wide{width:100%;text-align:center}
