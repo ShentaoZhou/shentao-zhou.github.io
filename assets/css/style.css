@@ -1,35 +1,72 @@
-:root {
+:root{
   --bg:#0b1020;
   --panel:#0f172a;
   --text:#e2e8f0;
   --brand:#38bdf8;
   --muted:#94a3b8;
   --maxw:1080px;
+  --radius:18px;
+  --shadow:0 10px 25px rgba(0,0,0,.25);
 }
 *{box-sizing:border-box}
-body {
-  margin:0;
-  font-family: sans-serif;
-  background: var(--bg);
-  color: var(--text);
+html,body{margin:0;padding:0;background:linear-gradient(180deg,#070b18,#0b1020);color:var(--text);font:16px/1.6 ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Inter,Helvetica,Arial,"Noto Sans",sans-serif}
+a{color:var(--brand);text-decoration:none}
+a:hover{opacity:.9}
+
+/* Nav */
+.nav{position:sticky;top:0;z-index:50;backdrop-filter:saturate(180%) blur(8px);background:rgba(11,16,32,.6);border-bottom:1px solid rgba(148,163,184,.12)}
+.nav-inner{max-width:var(--maxw);margin:auto;display:flex;align-items:center;justify-content:space-between;padding:12px 18px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:700}
+.brand-dot{width:10px;height:10px;border-radius:999px;background:var(--brand);box-shadow:0 0 18px var(--brand)}
+.links{display:flex;gap:18px;align-items:center}
+.links a{color:var(--text);opacity:.9}
+.links a.active{color:var(--brand)}
+
+/* Shell */
+.wrap{max-width:var(--maxw);margin:0 auto;padding:36px 18px}
+.panel{background:var(--panel);border:1px solid rgba(148,163,184,.12);border-radius:var(--radius);box-shadow:var(--shadow);padding:22px}
+
+/* Home layout: 左图右文 */
+.hero{display:grid;gap:24px;align-items:start}
+.hero-left-photo{grid-template-columns:320px 1fr}
+.hero-photo{display:flex;flex-direction:column;gap:12px;align-items:center}
+.avatar-lg{width:100%;max-width:300px;aspect-ratio:1/1;border-radius:16px;object-fit:cover;border:1px solid rgba(148,163,184,.18);box-shadow:var(--shadow)}
+.social-col{display:flex;flex-direction:column;gap:8px;width:100%}
+.chip{display:inline-flex;align-items:center;justify-content:center;padding:10px 12px;border-radius:999px;background:#1e293b;color:#e2e8f0;border:1px solid rgba(148,163,184,.25)}
+.chip.wide{width:100%;text-align:center}
+.kicker{letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-size:.88rem}
+h1{margin:.2em 0 .5em;font-size:clamp(28px,5vw,42px);line-height:1.15}
+.lede{color:#cbd5e1}
+.banner{margin-top:14px}
+.banner img{width:100%;border-radius:12px;border:1px solid rgba(148,163,184,.18)}
+
+/* Research & Projects */
+.section-title{display:flex;align-items:center;gap:10px;margin:0 0 16px}
+.section-title .bar{width:8px;height:22px;border-radius:6px;background:var(--brand);box-shadow:0 0 14px var(--brand)}
+.research-block + .research-block{margin-top:18px}
+.project-card + .project-card{margin-top:18px}
+.project-head{display:flex;align-items:center;justify-content:space-between;gap:10px}
+.meta{color:var(--muted);font-size:.92rem}
+
+/* 图片网格（占位） */
+.gallery2, .gallery3{display:grid;gap:12px;margin-top:12px}
+.gallery2{grid-template-columns:1fr 1fr}
+.gallery3{grid-template-columns:repeat(3,1fr)}
+.gallery2 img, .gallery3 img{width:100%;border-radius:10px;border:1px solid rgba(148,163,184,.18)}
+
+/* Bullets */
+.bullets{margin:10px 0 0 18px}
+.bullets li{margin:4px 0;color:#d6dde8}
+
+/* Footer */
+footer{color:var(--muted);text-align:center;padding:28px 12px}
+
+/* Responsive */
+@media (max-width: 860px){
+  .hero-left-photo{grid-template-columns:1fr}
+  .project-head{flex-direction:column;align-items:flex-start}
+  .gallery3{grid-template-columns:1fr 1fr}
 }
-.nav {
-  background: var(--panel);
-  padding: 10px 20px;
+@media (max-width: 560px){
+  .gallery2,.gallery3{grid-template-columns:1fr}
 }
-.nav-inner {max-width:var(--maxw); margin:auto; display:flex; justify-content:space-between; align-items:center;}
-.links a {margin-left:15px; color:var(--text); text-decoration:none;}
-.links a.active {color: var(--brand);}
-.wrap {max-width:var(--maxw); margin:auto; padding:30px;}
-.panel {background: var(--panel); padding:20px; border-radius:10px;}
-.hero {display:flex; gap:20px;}
-.hero-left {flex:2;}
-.hero-right {flex:1; text-align:center;}
-.avatar {max-width:200px; border-radius:10px;}
-.social {margin-top:10px; display:flex; gap:10px; flex-wrap:wrap; justify-content:center;}
-.chip {background:#1e293b; padding:6px 10px; border-radius:20px; color:#fff; font-size:0.9rem;}
-.section-title {display:flex; align-items:center; gap:10px; margin-bottom:20px;}
-.section-title .bar {width:8px; height:20px; background:var(--brand);}
-.grid {display:grid; gap:15px; grid-template-columns:repeat(auto-fit, minmax(250px, 1fr));}
-.card {background:#1e293b; padding:15px; border-radius:8px;}
-footer {text-align:center; color:var(--muted); padding:20px;}

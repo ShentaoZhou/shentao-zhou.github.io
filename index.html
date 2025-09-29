@@ -3,7 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Research — Shentao Zhou</title>
+  <title>Shentao Zhou — Home</title>
+  <meta name="description" content="Analog/Mixed-Signal IC — ADC · SerDes · PLL · AI-for-Analog · MEMS Oscillator Interfaces" />
   <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 <body>
@@ -11,27 +12,45 @@
     <div class="nav-inner">
       <a class="brand" href="index.html"><span class="brand-dot"></span><span>Shentao Zhou</span></a>
       <div class="links">
-        <a href="index.html">Home</a>
-        <a href="research.html" class="active">Research</a>
+        <a href="index.html" class="active">Home</a>
+        <a href="research.html">Research</a>
         <a href="projects.html">Projects</a>
       </div>
     </div>
   </nav>
 
   <main class="wrap">
-    <div class="section-title"><span class="bar"></span><h2>Research</h2></div>
-    <div class="grid">
-      <article class="card"><h3>High-Speed Data Converters (SAR / ΔΣ)</h3></article>
-      <article class="card"><h3>SerDes & High-Speed I/O Links</h3></article>
-      <article class="card"><h3>AI-for-Analog (ML-assisted design)</h3></article>
-      <article class="card"><h3>Cryo-CMOS & Device/BEOL Modeling</h3></article>
-      <article class="card"><h3>MEMS-Oscillator Interfaces</h3></article>
-      <article class="card"><h3>Open-Source Silicon (SKY130)</h3></article>
+    <div class="panel hero hero-left-photo">
+      <!-- 左侧：头像 + 联系方式 -->
+      <aside class="hero-photo">
+        <!-- 替换为你的头像路径 -->
+        <img class="avatar-lg" src="assets/img/avatar.jpg" alt="Portrait of Shentao Zhou" />
+        <div class="social-col">
+          <a class="chip wide" href="mailto:shentaozhou3@gmail.com">shentaozhou3@gmail.com</a>
+          <a class="chip wide" href="https://github.com/ShentaoZhou" target="_blank" rel="noopener">github.com/ShentaoZhou</a>
+        </div>
+      </aside>
+
+      <!-- 右侧：简介 -->
+      <section class="hero-copy">
+        <div class="kicker">Analog / Mixed-Signal IC</div>
+        <h1>Hi, I’m Shentao. I design data converters and high-speed interfaces.</h1>
+        <p class="lede">
+          Focus areas: <strong>ADC/ΔΣ, SerDes & high-speed I/O, PLL/clocking, cryo-CMOS</strong>, and <strong>AI-for-Analog</strong>.
+          Recent work includes a <strong>Bandgap Reference (BGR)</strong> and a <strong>Transimpedance Amplifier (TIA)</strong> interfacing a MEMS-based oscillator — both slated for silicon tape-out (SKY130).
+        </p>
+        <p class="lede">
+          Currently B.Eng. @ ShanghaiTech; exchange @ UC Berkeley. I enjoy combining device/circuit intuition with ML-assisted flows to make analog design faster and more robust.
+        </p>
+        <!-- 主页也预留一张横幅图位（可放合照/实验室/芯片显微照） -->
+        <figure class="banner">
+          <img src="assets/img/home-banner.jpg" alt="Featured photo placeholder" />
+          <figcaption>Home banner (replace with your own image).</figcaption>
+        </figure>
+      </section>
     </div>
   </main>
 
-  <footer>
-    © <script>document.write(new Date().getFullYear())</script> Shentao Zhou.
-  </footer>
+  <footer>© <script>document.write(new Date().getFullYear())</script> Shentao Zhou.</footer>
 </body>
 </html>

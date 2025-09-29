@@ -19,16 +19,49 @@
   </nav>
 
   <main class="wrap">
-    <div class="section-title"><span class="bar"></span><h2>Projects</h2></div>
-    <div class="grid">
-      <article class="card"><h3>Transimpedance Amplifier (TIA) for MEMS Oscillator</h3></article>
-      <article class="card"><h3>Bandgap Reference (BGR)</h3></article>
-      <article class="card"><h3>AI-Assisted Analog Sizing</h3></article>
-    </div>
+    <header class="section-title"><span class="bar"></span><h2>Projects</h2></header>
+
+    <!-- EE140 Analog IC Design Project -->
+    <article class="panel project-card">
+      <div class="project-head">
+        <h3>EE140 — Analog IC Design Lab: Folded-Cascode Amplifier</h3>
+        <span class="meta">UC Berkeley</span>
+      </div>
+      <p>
+        Designed a folded-cascode op-amp meeting closed-loop gain, phase margin, PSRR/CMRR and settling-time targets
+        under process/voltage/temperature variations; verified in Spectre with Monte-Carlo and AC/transient sweeps.
+      </p>
+      <ul class="bullets">
+        <li>Focus: gain-bandwidth trade-off, compensation, biasing for robustness.</li>
+        <li>Checks: AC gain/PM, step response (settling), PSRR/CMRR, noise estimate.</li>
+      </ul>
+      <div class="gallery3">
+        <figure><img src="assets/img/ee140-schematic.jpg" alt="EE140 schematic placeholder"><figcaption>Schematic</figcaption></figure>
+        <figure><img src="assets/img/ee140-bode.jpg" alt="EE140 Bode placeholder"><figcaption>Bode/PM</figcaption></figure>
+        <figure><img src="assets/img/ee140-step.jpg" alt="EE140 step response placeholder"><figcaption>Step response</figcaption></figure>
+      </div>
+    </article>
+
+    <!-- EE143 Microfabrication Project -->
+    <article class="panel project-card">
+      <div class="project-head">
+        <h3>EE143 — Microfabrication Lab: Process Flow & Test Chips</h3>
+        <span class="meta">UC Berkeley</span>
+      </div>
+      <p>
+        Hands-on microfabrication: lithography, etching, oxidation, deposition; fabricated devices (transistors/resistors/diodes/capacitors)
+        and measured electrical characteristics to close the loop with device-level models.
+      </p>
+      <div class="gallery3">
+        <figure><img src="assets/img/ee143-process.jpg" alt="EE143 process placeholder"><figcaption>Process flow</figcaption></figure>
+        <figure><img src="assets/img/ee143-mask.jpg" alt="EE143 mask placeholder"><figcaption>Masks</figcaption></figure>
+        <figure><img src="assets/img/ee143-measure.jpg" alt="EE143 measurement placeholder"><figcaption>Device measurement</figcaption></figure>
+      </div>
+    </article>
+
+    <!-- 可继续添加其他项目卡片 -->
   </main>
 
-  <footer>
-    © <script>document.write(new Date().getFullYear())</script> Shentao Zhou.
-  </footer>
+  <footer>© <script>document.write(new Date().getFullYear())</script> Shentao Zhou.</footer>
 </body>
 </html>

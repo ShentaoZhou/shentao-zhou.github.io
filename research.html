@@ -19,19 +19,75 @@
   </nav>
 
   <main class="wrap">
-    <div class="section-title"><span class="bar"></span><h2>Research</h2></div>
-    <div class="grid">
-      <article class="card"><h3>High-Speed Data Converters (SAR / ΔΣ)</h3></article>
-      <article class="card"><h3>SerDes & High-Speed I/O Links</h3></article>
-      <article class="card"><h3>AI-for-Analog (ML-assisted design)</h3></article>
-      <article class="card"><h3>Cryo-CMOS & Device/BEOL Modeling</h3></article>
-      <article class="card"><h3>MEMS-Oscillator Interfaces</h3></article>
-      <article class="card"><h3>Open-Source Silicon (SKY130)</h3></article>
-    </div>
+    <header class="section-title"><span class="bar"></span><h2>Research</h2></header>
+
+    <!-- 1) Berkeley：SKY130 BGR 全流程 -->
+    <article class="panel research-block">
+      <h3>SKY130 Bandgap Reference (BGR): Schematic → Layout → Verification Workflow</h3>
+      <p>
+        Designed and verified a curvature-compensated BGR in the open-source <strong>SKY130</strong> PDK using Cadence Virtuoso.
+        The workflow covers <strong>schematic design</strong>, <strong>full-custom layout</strong>, and <strong>DRC/LVS/PEX</strong> verification
+        (e.g., Pegasus or compatible flows), followed by corner/Monte-Carlo simulations for <strong>linearity, noise, and temperature stability</strong>.
+      </p>
+      <ul class="bullets">
+        <li>Focus: reference accuracy/TC, startup robustness, supply/PSRR and mismatch analysis.</li>
+        <li>Workflow: schematic → pre-layout sims → layout → DRC/LVS → PEX → post-layout sims.</li>
+      </ul>
+      <div class="gallery3">
+        <figure><img src="assets/img/bgr-schematic.jpg" alt="BGR schematic placeholder"><figcaption>Schematic (placeholder)</figcaption></figure>
+        <figure><img src="assets/img/bgr-layout.jpg" alt="BGR layout placeholder"><figcaption>Layout (placeholder)</figcaption></figure>
+        <figure><img src="assets/img/bgr-postlayout.jpg" alt="Post-layout sim placeholder"><figcaption>Post-layout sims (placeholder)</figcaption></figure>
+      </div>
+    </article>
+
+    <!-- 2) TIA + MEMS 振荡器 -->
+    <article class="panel research-block">
+      <h3>TIA + MEMS Oscillator Interface</h3>
+      <p>
+        Built a <strong>transimpedance amplifier (TIA)</strong> to sustain a <strong>MEMS resonator</strong>, achieving stable oscillation and
+        clock signal generation. The design balances <strong>noise</strong>, <strong>bandwidth</strong>, and <strong>startup/phase-noise</strong> performance,
+        with biasing and loading tuned around the resonator characteristics.
+      </p>
+      <ul class="bullets">
+        <li>Key concerns: input-referred noise, loop gain/phase, startup margin, and output buffering.</li>
+        <li>Verification: transient startup, phase-noise estimation, PVT robustness.</li>
+      </ul>
+      <div class="gallery2">
+        <figure><img src="assets/img/mems-osc.jpg" alt="MEMS oscillator placeholder"><figcaption>MEMS oscillator (placeholder)</figcaption></figure>
+        <figure><img src="assets/img/tia-front-end.jpg" alt="TIA front-end placeholder"><figcaption>TIA front-end (placeholder)</figcaption></figure>
+      </div>
+    </article>
+
+    <!-- 3) Auto-Cryo-Device-Model -->
+    <article class="panel research-block">
+      <h3>Auto-Cryo-Device-Model (Ongoing)</h3>
+      <p>
+        Building an automated modeling flow for <strong>low-temperature (cryo) CMOS devices</strong>, including data acquisition/curation,
+        compact-model fitting, and <strong>ML-assisted surrogate modeling</strong> for <em>model parameter extraction</em> and <em>circuit-level prediction</em>.
+        Goal: accelerate <strong>cryo-CMOS</strong> design/verification by streamlining device-to-circuit translation.
+      </p>
+      <div class="gallery3">
+        <figure><img src="assets/img/cryo-setup.jpg" alt="Cryo setup placeholder"><figcaption>Cryo setup (placeholder)</figcaption></figure>
+        <figure><img src="assets/img/model-fit.jpg" alt="Model fitting placeholder"><figcaption>Model fitting (placeholder)</figcaption></figure>
+        <figure><img src="assets/img/surrogate.jpg" alt="Surrogate modeling placeholder"><figcaption>Surrogate modeling (placeholder)</figcaption></figure>
+      </div>
+    </article>
+
+    <!-- 4) TMR-ADC（磁阻+ADC） -->
+    <article class="panel research-block">
+      <h3>TMR-ADC: Tunnel Magnetoresistance Front-End + ADC Readout</h3>
+      <p>
+        Exploring a <strong>TMR (Tunnel Magnetoresistance)</strong> sensor front-end combined with an <strong>ADC</strong> readout chain.
+        Emphasis on front-end <strong>SNR</strong> and <strong>linearity</strong>, reference stability, and system-level calibration for robust
+        magnetic-to-digital conversion.
+      </p>
+      <div class="gallery2">
+        <figure><img src="assets/img/tmr-frontend.jpg" alt="TMR front-end placeholder"><figcaption>TMR front-end (placeholder)</figcaption></figure>
+        <figure><img src="assets/img/tmr-adc.jpg" alt="ADC readout placeholder"><figcaption>ADC readout (placeholder)</figcaption></figure>
+      </div>
+    </article>
   </main>
 
-  <footer>
-    © <script>document.write(new Date().getFullYear())</script> Shentao Zhou.
-  </footer>
+  <footer>© <script>document.write(new Date().getFullYear())</script> Shentao Zhou.</footer>
 </body>
 </html>
